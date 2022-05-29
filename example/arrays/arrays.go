@@ -28,4 +28,22 @@ func main() {
 		}
 	}
 	fmt.Println("twoDimensionalArray", twoDimensionalArray)
+
+	// 遍历数组：打印索引 + 元素
+	for i, v := range a {
+		fmt.Printf("%d %d\n", i, v)
+	}
+
+	// 数组长度：未初始化的元素，值为 0
+	var b [3]int = [3]int{1}
+	fmt.Println(b)
+
+	// 数组长度是数组类型一部分
+	c := [...]int{0}
+	d := [...]int{0, 1}
+	fmt.Printf("Type: %T\n", c)
+	fmt.Printf("Type: %T\n", d)
+
+	// 不同类型不能赋值
+	// c = d 编译错误
 }
